@@ -1,53 +1,65 @@
-# @ai-primitives/package-template
+# @ai-primitives/workspace-template
 
-[![npm version](https://badge.fury.io/js/%40ai-primitives%2Fpackage-template.svg)](https://www.npmjs.com/package/@ai-primitives/package-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A modern TypeScript package template with Vitest, Prettier, ESLint, and semantic versioning.
+A modern TypeScript monorepo template with pnpm workspaces, Turborepo, and shared configurations.
 
 ## Features
 
-- 🚀 TypeScript for type safety and modern JavaScript features
-- ⚡️ Vitest for fast, modern testing
+- 🏗️ pnpm workspaces for package management
+- 🚀 Turborepo for build orchestration
+- 📦 Example package with TypeScript and Vitest
+- 🔧 Shared ESLint and TypeScript configurations
 - 🎨 Prettier for consistent code formatting
-- 🔍 ESLint for code quality
-- 📦 Semantic versioning with automated releases
 - 🔄 GitHub Actions for CI/CD
 
-## Installation
+## Getting Started
 
 ```bash
-pnpm add @ai-primitives/package-template
-```
+# Clone the template
+gh repo clone ai-primitives/workspace-template my-workspace
 
-## Usage
-
-```typescript
-import { add } from '@ai-primitives/package-template'
-
-const result = add(1, 2) // returns 3
-```
-
-## Development
-
-```bash
 # Install dependencies
+cd my-workspace
 pnpm install
+
+# Build all packages
+pnpm build
 
 # Run tests
 pnpm test
 
+# Lint code
+pnpm lint
+```
+
+## Workspace Structure
+
+```
+.
+├── packages/           # Package implementations
+│   └── example-package/
+├── sites/             # Frontend applications
+├── utilities/         # Shared configurations
+│   ├── eslint-config/
+│   ├── prettier-config/
+│   └── tsconfig/
+├── pnpm-workspace.yaml
+└── turbo.json
+```
+
+## Development Workflow
+
+```bash
+# Create a new package
+mkdir packages/my-package
+cd packages/my-package
+
+# Start development
+pnpm dev
+
 # Run tests in watch mode
 pnpm test:watch
-
-# Build the package
-pnpm build
-
-# Lint the code
-pnpm lint
-
-# Format the code
-pnpm format
 ```
 
 ## Contributing
@@ -60,8 +72,10 @@ MIT © [AI Primitives](https://mdx.org.ai)
 
 ## Dependencies
 
-This package uses the following key dependencies:
+This workspace uses the following key dependencies:
 
+- pnpm for package management
+- Turborepo for build orchestration
 - TypeScript for static typing
 - Vitest for testing
 - ESLint for linting
