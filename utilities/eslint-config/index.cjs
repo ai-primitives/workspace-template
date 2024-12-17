@@ -1,16 +1,13 @@
-import js from '@eslint/js'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
-import reactPlugin from 'eslint-plugin-react'
-import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import eslintConfigPrettier from 'eslint-config-prettier'
+const js = require('@eslint/js')
+const tsPlugin = require('@typescript-eslint/eslint-plugin')
+const tsParser = require('@typescript-eslint/parser')
+const reactPlugin = require('eslint-plugin-react')
+const reactHooksPlugin = require('eslint-plugin-react-hooks')
 
-export default [
+module.exports = [
   js.configs.recommended,
-  eslintConfigPrettier,
   {
     files: ['src/**/*.{ts,tsx}'],
-    ignores: ['**/*.d.ts'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -29,11 +26,6 @@ export default [
       '@typescript-eslint': tsPlugin,
       'react': reactPlugin,
       'react-hooks': reactHooksPlugin
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
