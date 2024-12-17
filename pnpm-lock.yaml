@@ -125,6 +125,8 @@ importers:
 
   utilities/tsconfig: {}
 
+  utilities/typescript-config: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':
