@@ -7,5 +7,10 @@ export const nextJsConfig = {
     ...baseConfig.extends,
     'plugin:@next/next/recommended',
     'plugin:@next/next/core-web-vitals'
-  ]
+  ],
+  overrideConfig: {
+    linterOptions: {
+      reportUnusedDisableDirectives: true
+    }
+  }
 }
