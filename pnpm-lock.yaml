@@ -80,15 +80,18 @@ importers:
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../../utilities/eslint-config
-      '@workspace/tsconfig':
+      '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:../../utilities/tsconfig
+        version: link:../../utilities/typescript-config
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@22.10.2)(jsdom@25.0.1)
