@@ -17,6 +17,10 @@
 - [x] CLI functionality
   - [x] Basic command-line interface
   - [x] Version and help commands
+- [x] API Implementation
+  - [x] Cloudflare Worker setup
+  - [x] Basic routing with itty-router
+  - [x] Root endpoint implementation
 - [ ] Advanced features
   - [ ] Additional CLI commands
   - [ ] Extended test coverage
@@ -26,7 +30,7 @@
 
 - [x] Create README with badges and usage instructions
 - [ ] Complete CONTRIBUTING.md guide
-- [ ] Add API documentation
+- [x] Add API documentation
 - [ ] Add examples directory with usage examples
 
 ## CI/CD
@@ -42,3 +46,7 @@
 - [ ] Add changelog generation
 - [ ] Add pull request template
 - [ ] Add issue templates
+- [ ] Extend API functionality
+  - [ ] Add more endpoints
+  - [ ] Add request/response type definitions
+  - [ ] Add API documentation generator
