@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./react": "./react.js"
+  },
   "dependencies": {
     "@eslint/js": "^8.57.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
