@@ -9,6 +9,7 @@ A modern TypeScript monorepo template with pnpm workspaces, Turborepo, and share
 - 🏗️ pnpm workspaces for package management
 - 🚀 Turborepo for build orchestration
 - 📦 Example package with TypeScript and Vitest
+- 📚 Documentation site template with Nextra and MDX
 - 🔧 Shared ESLint and TypeScript configurations
 - 🎨 Prettier for consistent code formatting
 - 🔄 GitHub Actions for CI/CD
@@ -37,9 +38,11 @@ pnpm lint
 
 ```
 .
-├── packages/           # Package implementations
+├── apps/              # Applications
+│   ├── docs/         # Documentation site using Nextra
+│   └── web/          # Web application
+├── packages/          # Package implementations
 │   └── example-package/
-├── sites/             # Frontend applications
 ├── utilities/         # Shared configurations
 │   ├── eslint-config/
 │   ├── prettier-config/
@@ -60,6 +63,27 @@ pnpm dev
 
 # Run tests in watch mode
 pnpm test:watch
+
+# Start documentation site
+cd apps/docs
+pnpm dev
+```
+
+## Documentation Site
+
+The template includes a documentation site powered by [Nextra](https://nextra.site) in the `apps/docs` directory. It supports:
+
+- MDX for content authoring
+- Integration with workspace packages
+- Custom React components
+- Automatic navigation
+- Dark/light mode
+
+To start the documentation site:
+
+```bash
+cd apps/docs
+pnpm dev
 ```
 
 ## Contributing
@@ -80,3 +104,4 @@ This workspace uses the following key dependencies:
 - Vitest for testing
 - ESLint for linting
 - Prettier for code formatting
+- Nextra for documentation

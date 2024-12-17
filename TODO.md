@@ -22,9 +22,27 @@
   - [ ] Extended test coverage
   - [ ] Documentation examples
 
+## Documentation Site
+
+- [x] Set up Nextra documentation site
+  - [x] Configure Next.js and Nextra
+  - [x] Set up proper routing structure
+  - [x] Configure theme and layout
+  - [x] Add example MDX content
+- [x] Integrate with workspace
+  - [x] Configure ESLint and TypeScript
+  - [x] Set up proper imports from workspace packages
+  - [x] Add example component integration
+- [ ] Documentation enhancements
+  - [ ] Add more example components
+  - [ ] Add API documentation examples
+  - [ ] Add custom theme configuration
+  - [ ] Add search functionality
+
 ## Documentation
 
 - [x] Create README with badges and usage instructions
+- [x] Document documentation site setup and usage
 - [ ] Complete CONTRIBUTING.md guide
 - [ ] Add API documentation
 - [ ] Add examples directory with usage examples
