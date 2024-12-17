@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Button } from "@workspace/example-ui";
+import { Button } from "@repo/example-ui";
 
 export default function Home() {
   return (
