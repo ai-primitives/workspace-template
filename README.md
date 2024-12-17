@@ -38,6 +38,7 @@ pnpm lint
 ```
 .
 ├── packages/           # Package implementations
+│   ├── api/           # Cloudflare Worker API
 │   └── example-package/
 ├── sites/             # Frontend applications
 ├── utilities/         # Shared configurations
@@ -61,6 +62,19 @@ pnpm dev
 # Run tests in watch mode
 pnpm test:watch
 ```
+
+## API Package
+
+The `@ai-primitives/api` package provides a Cloudflare Worker API using itty-router:
+
+```typescript
+// Example usage
+fetch('https://your-worker.workers.dev/') // Returns 'Success!'
+```
+
+### Endpoints
+
+- `GET /` - Returns 'Success!' message
 
 ## Contributing
 
