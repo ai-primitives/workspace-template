@@ -11,7 +11,15 @@ export const nextJsConfig = [
   eslintConfigPrettier,
   {
     files: ['app/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'],
-    ignores: ['**/*.d.ts'],
+    ignores: [
+      '**/*.d.ts',
+      '.next/**/*',
+      'node_modules/**/*',
+      'dist/**/*',
+      '**/static/chunks/**/*',
+      '**/_buildManifest.js',
+      '**/_ssgManifest.js'
+    ],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -23,7 +31,23 @@ export const nextJsConfig = [
       },
       globals: {
         React: 'readonly',
-        JSX: 'readonly'
+        JSX: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        self: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        FormData: 'readonly',
+        FileReader: 'readonly',
+        XMLHttpRequest: 'readonly',
+        trustedTypes: 'readonly',
+        ActiveXObject: 'readonly',
+        Bun: 'readonly',
+        Deno: 'readonly'
       }
     },
     plugins: {
@@ -45,7 +69,14 @@ export const nextJsConfig = [
       ...reactPlugin.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off', // TypeScript handles this
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error'],
+      'no-empty': ['error', { 'allowEmptyCatch': true }],
+      'no-prototype-builtins': 'off',
+      'no-redeclare': 'off', // TypeScript handles this
+      'no-cond-assign': ['error', 'except-parens']
     }
   }
 ]
