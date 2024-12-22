@@ -1,18 +1,53 @@
-# Introduction
+import { Cards, Steps } from 'nextra/components'
+import { SiMarkdown, SiYaml, SiJson, SiJavascript, SiReact } from 'react-icons/si'
+import { HiOutlineSparkles } from 'react-icons/hi2'
 
-Welcome to the documentation site. This site demonstrates the integration of a documentation app within the monorepo structure.
+# Why MDX?
 
-## Features
+MDX brings together unstructured content via Markdown, typed schemas via JSON-LD, structured data via YAML frontmatter,
+executable code via JavaScript/TypeScript, and UI components via JSX/React.
 
-- Built with Next.js and Nextra
-- Integrated with workspace configurations
-- Uses shared components from the monorepo
-- Supports MDX for rich content
+<Cards num={5}>
+  <Cards.Card icon={<HiOutlineSparkles />} title='Generative AI' href='#generative-ai'/>
+  <Cards.Card icon={<SiMarkdown />} title='Markdown' href='#markdown'/>
+  <Cards.Card icon={<SiYaml />} title='YAML' href='#yaml'/>
+  <Cards.Card icon={<SiJson />} title='JSON-LD' href='#json-ld'/>
+  <Cards.Card icon={<SiJavascript />} title='Javascript / Typescript' href='#javascript-typescript'/>
+  <Cards.Card icon={<SiReact />} title='JSX / React' href='#jsx-react'/>
+</Cards>
+<Steps>
 
-## Example Component
+### Functions
 
-import { Button } from '@repo/example-ui'
+Functions are the building blocks of AI Primitives. They are small, reusable pieces of code that can be used to perform specific tasks.
 
-<Button>Click me!</Button>
+### Workflows
 
-This button is imported from our shared UI package, demonstrating component reuse across the monorepo.
+Workflows are the building blocks of AI Primitives. They are small, reusable pieces of code that can be used to perform specific tasks.
+
+### Agents
+
+Agents are the building blocks of AI Primitives. They are small, reusable pieces of code that can be used to perform specific tasks.
+
+</Steps>
+
+```mermaid
+graph TD;
+  subgraph AA [Consumers]
+    A[Mobile app];
+    B[Web app];
+    C[Node.js client];
+  end
+  subgraph BB [Services]
+    E[REST API];
+    F[GraphQL API];
+    G[SOAP API];
+  end
+  Z[GraphQL API];
+  A --> Z;
+  B --> Z;
+  C --> Z;
+  Z --> E;
+  Z --> F;
+  Z --> G;
+```

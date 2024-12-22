@@ -32,11 +32,5 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
-  },
-  "prettier": {
-    "printWidth": 160,
-    "semi": false,
-    "singleQuote": true,
-    "jsxSingleQuote": true
   }
 }

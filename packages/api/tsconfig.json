@@ -1,9 +1,10 @@
 {
-  "extends": "../../utilities/tsconfig/base.json",
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src"
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["esnext"],
+    "types": ["@cloudflare/workers-types"],
+    "outDir": "./dist"
   }
 }
